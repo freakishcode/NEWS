@@ -1,4 +1,5 @@
 import {
+  Box,
   Grid,
   CircularProgress,
   Typography,
@@ -22,7 +23,22 @@ export default function NewsList({
 }) {
   const { data, isLoading, isError } = useNews(category, query, page, pageSize);
 
-  if (isLoading) return <CircularProgress />;
+  // If data is still loading, show a loading spinner
+  if (isLoading)
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh", // full page height
+        }}
+      >
+        <CircularProgress />
+      </Box>
+    );
+
+  // If there's an error, show an error message
   if (isError)
     return <Typography color='error'>Failed to load news.</Typography>;
   if (!data?.articles?.length) return <Typography>No news found.</Typography>;

@@ -37,7 +37,7 @@ export default function App() {
     <>
       <AppBar position='sticky' sx={{ mb: 3 }}>
         <Toolbar sx={{ justifyContent: "space-between" }}>
-          <Typography variant='h6'>📰 React Query News</Typography>
+          <Typography variant='h6'>📰 Daily Times News</Typography>
           <ThemeToggle />
         </Toolbar>
       </AppBar>

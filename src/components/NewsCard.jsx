@@ -16,6 +16,11 @@ export default function NewsCard({ article }) {
         height: "100%",
         display: "flex",
         flexDirection: "column",
+        transition: "transform 0.3s ease, box-shadow 0.3s ease", // smooth animation
+        "&:hover": {
+          transform: "scale(1.05)", // scales forward
+          boxShadow: "0 8px 20px rgba(0,0,0,0.2)", // optional: stronger shadow
+        },
       }}
     >
       {article.urlToImage && (

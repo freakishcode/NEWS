@@ -41,8 +41,8 @@ src/
 ### 1️⃣ Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/react-news-app.git
-cd react-news-app
+git clone https://github.com/freakishcode/NEWS.git
+cd NEWS
 ```
 
 ### 2️⃣ Install dependencies
